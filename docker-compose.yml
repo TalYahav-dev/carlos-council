@@ -1,0 +1,27 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8006:8000"
+    env_file:
+      - .env
+    volumes:
+      - db-data:/app/data
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_SPLINE_SCENE_URL: ${NEXT_PUBLIC_SPLINE_SCENE_URL:-}
+    ports:
+      - "3006:3000"
+    environment:
+      COUNCIL_BACKEND_URL: http://backend:8000
+      NEXT_PUBLIC_SPLINE_SCENE_URL: ${NEXT_PUBLIC_SPLINE_SCENE_URL:-}
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  db-data:

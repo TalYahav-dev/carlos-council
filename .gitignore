@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+
+# Node
+node_modules/
+.next/
+out/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Database / runtime data
+backend/data/*.db
+*.db
+*.sqlite
+*.sqlite3
+
+# Vercel
+.vercel
+
+# Claude Code / local agent state
+.claude/
+
+# Private business data — never commit (see examples/ for a sanitized template)
+business-dossier/
+
+# Private reference photos of the real Carlos — used locally to generate the
+# stylized brand assets, but the raw photos themselves should not ship.
+frontend/scripts/brand/reference/
+
+# Local planning / scratch notes (not part of the public product)
+goal.md
+GOAL.md
+spline-plan.md
+graphify-out/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

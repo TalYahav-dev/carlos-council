@@ -1,0 +1,102 @@
+{
+  "model": "gpt-image-2",
+  "outputDir": "public",
+  "referenceDir": "scripts/brand/reference",
+  "characterSheet": "Carlos is a real, specific SENIOR YELLOW LABRADOR (a lab mix). Render him as the SAME recognizable dog every time. Coat: pale butter-cream / light yellow, warming to soft tan along the back, ears and the bridge of the muzzle; near-white on the chest, blaze and lower legs. Face: a soft white blaze runs up the muzzle and forehead between the eyes. Nose: rosy-brown (liver/dudley) with darker edges and a dark upper-lip line. Eyes: warm dark-brown, gentle and a touch soft/droopy — a calm, wise, senior expression. Ears: floppy, tan-amber, set fairly high, hanging along the cheeks. Build: athletic but lean and slightly houndy, deep chest — a dignified older dog. Signature accent: a burnt-orange collar that echoes the brand amber (keep it subtle). Temperament to convey: calm, grounded, loyal, perceptive — a wise companion, never silly or cartoonish. Brand palette: warm amber #B45309, cream #FFFBEB, ink #1C1917, stone #57534E. Style: modern editorial illustration — clean confident linework, soft flat shading, gentle warmth, generous negative space. NOT hyper-real, NOT childish 3D, NOT a photograph.",
+  "negative": "Do not include: text, letters, numbers, words, watermark, signature, logo, frame or border, neon or harsh colors, cluttered background, more than one dog, distorted anatomy, scary or bared teeth, a cartoon-gimmick mascot look, or any human face.",
+  "assets": [
+    {
+      "name": "carlos-hero",
+      "genSize": "1024x1536",
+      "background": "transparent",
+      "useReferences": true,
+      "scene": "Carlos sitting calmly and upright, attentive and dignified, head very slightly tilted, as if quietly presiding over a council. Three-quarter front view, full head and chest. Behind him, a faint warm amber compass / round-table arc motif. Lots of clean negative space around him.",
+      "alt": "Carlos, a calm yellow Labrador, sitting attentively as if presiding over a council.",
+      "outputs": [
+        { "file": "carlos-hero.png", "width": 1000, "height": 1250, "format": "png" },
+        { "file": "carlos-hero.webp", "width": 1000, "height": 1250, "format": "webp" }
+      ]
+    },
+    {
+      "name": "carlos-avatar",
+      "genSize": "1024x1024",
+      "background": "transparent",
+      "useReferences": true,
+      "scene": "A tight, friendly head-and-shoulders portrait of Carlos, centered and facing forward, calm and confident — intended to be cropped into a circular avatar for his seat on the council.",
+      "alt": "Carlos — head-and-shoulders portrait avatar.",
+      "outputs": [
+        { "file": "carlos-avatar.png", "width": 256, "height": 256, "format": "png" },
+        { "file": "carlos-avatar.webp", "width": 256, "height": 256, "format": "webp" }
+      ]
+    },
+    {
+      "name": "empty-carlos",
+      "genSize": "1024x1024",
+      "background": "transparent",
+      "useReferences": true,
+      "scene": "Carlos lying down, relaxed, chin resting on his front paws, patient and content — waiting calmly. Conveys 'ready when you are.' Minimal, lots of empty space.",
+      "alt": "Carlos resting, waiting for a brief.",
+      "outputs": [
+        { "file": "empty-carlos.png", "width": 480, "height": 480, "format": "png" },
+        { "file": "empty-carlos.webp", "width": 480, "height": 480, "format": "webp" }
+      ]
+    },
+    {
+      "name": "carlos-listening",
+      "genSize": "1024x1024",
+      "background": "transparent",
+      "useReferences": true,
+      "scene": "Carlos in profile, ears lifted, listening attentively, calm and focused, as if the council is deliberating around him. Simple and quiet.",
+      "alt": "Carlos listening attentively while the council deliberates.",
+      "outputs": [
+        { "file": "carlos-listening.png", "width": 240, "height": 240, "format": "png" },
+        { "file": "carlos-listening.webp", "width": 240, "height": 240, "format": "webp" }
+      ]
+    },
+    {
+      "name": "onboarding-analyze",
+      "genSize": "1024x1024",
+      "background": "transparent",
+      "useReferences": true,
+      "scene": "Carlos sitting calmly at the center with five small ABSTRACT advisor figures around him — simple faceless geometric silhouettes, not animals — all studying a single document together. Warm, collaborative, quiet.",
+      "alt": "Carlos and five abstract advisors studying a brief together.",
+      "outputs": [
+        { "file": "onboarding-analyze.webp", "width": 800, "height": 600, "format": "webp" }
+      ]
+    },
+    {
+      "name": "onboarding-clarify",
+      "genSize": "1024x1024",
+      "background": "transparent",
+      "useReferences": true,
+      "scene": "Carlos tilting his head thoughtfully, raising a gentle question — a single soft glowing amber question mark floating nearby. Curious and kind.",
+      "alt": "Carlos tilting his head, raising a thoughtful question.",
+      "outputs": [
+        { "file": "onboarding-clarify.webp", "width": 800, "height": 600, "format": "webp" }
+      ]
+    },
+    {
+      "name": "onboarding-plan",
+      "genSize": "1024x1024",
+      "background": "transparent",
+      "useReferences": true,
+      "scene": "Carlos sitting beside a clean board, calmly presenting a tidy strategic plan (show the board as plain horizontal lines, NO readable text) to the viewer. Composed and reassuring.",
+      "alt": "Carlos presenting the final strategic plan.",
+      "outputs": [
+        { "file": "onboarding-plan.webp", "width": 800, "height": 600, "format": "webp" }
+      ]
+    },
+    {
+      "name": "carlos-og",
+      "genSize": "1536x1024",
+      "background": "opaque",
+      "backgroundColor": "#FFFBEB",
+      "useReferences": true,
+      "scene": "Carlos's calm portrait positioned on the RIGHT third of a wide warm-cream frame, looking toward the viewer. Keep the LEFT ~55% intentionally clean and empty (for a wordmark overlay added later). Editorial, spacious, dignified.",
+      "alt": "Carlos Council — Carlos looking calmly toward the viewer.",
+      "outputs": [
+        { "file": "carlos-og-raw.png", "width": 1200, "height": 630, "format": "png" }
+      ]
+    }
+  ]
+}

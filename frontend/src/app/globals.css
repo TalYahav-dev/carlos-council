@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+/* ── Design tokens ────────────────────────────────── */
+:root {
+  --bg:           #FAFAF9;
+  --bg-surface:   #FFFFFF;
+  --bg-elevated:  #F5F5F4;
+  --bg-inset:     #EFEDEB;
+  --border:       #E7E5E4;
+  --border-strong: #D6D3D1;
+  --text:         #1C1917;
+  --text-secondary: #57534E;
+  --text-muted:   #A8A29E;
+  --gold:         #B45309;
+  --gold-light:   #FEF3C7;
+  --gold-surface: #FFFBEB;
+  --accent:       #B45309;
+
+  --font-display: var(--font-instrument-serif), Georgia, serif;
+  --font-body:    var(--font-dm-sans), system-ui, sans-serif;
+
+  --radius:       12px;
+  --radius-lg:    16px;
+  --radius-sm:    8px;
+  --shadow-sm:    0 1px 2px rgba(28, 25, 23, 0.04);
+  --shadow:       0 1px 3px rgba(28, 25, 23, 0.06), 0 1px 2px rgba(28, 25, 23, 0.04);
+  --shadow-md:    0 4px 6px -1px rgba(28, 25, 23, 0.06), 0 2px 4px -2px rgba(28, 25, 23, 0.04);
+  --shadow-lg:    0 10px 15px -3px rgba(28, 25, 23, 0.06), 0 4px 6px -4px rgba(28, 25, 23, 0.04);
+}
+
+/* ── Base ─────────────────────────────────────────── */
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* ── Custom scrollbar ─────────────────────────────── */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) transparent;
+}
+
+/* ── Streaming cursor ─────────────────────────────── */
+.streaming-cursor::after {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: var(--gold);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ── Slide-in animation ───────────────────────────── */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-in {
+  animation: slideIn 0.35s ease-out;
+}
+
+/* ── Fade-in animation ────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* ── Prose overrides for light theme ──────────────── */
+.prose pre {
+  background-color: var(--bg-elevated) !important;
+  border: 1px solid var(--border) !important;
+}
+.prose code {
+  font-size: 0.85em;
+}
+
+/* ── Line clamp ───────────────────────────────────── */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Typewriter container ─────────────────────────── */
+.typewriter-text {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* ── Pulse ring for active agent ──────────────────── */
+@keyframes pulseRing {
+  0%   { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+.pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 9999px;
+  border: 2px solid currentColor;
+  animation: pulseRing 1.5s ease-out infinite;
+}
+
+/* ── Agent avatar glow (active) ───────────────────── */
+.agent-active {
+  box-shadow: 0 0 0 3px var(--bg-surface), 0 0 0 5px currentColor;
+}
+
+/* ── Warm glow for Spline scene ───────────────────── */
+@keyframes warmGlow {
+  0%, 100% {
+    opacity: 0.55;
+    transform: translate(-50%, -50%) scale(0.96);
+  }
+  50% {
+    opacity: 0.82;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+.animate-warm-glow {
+  animation: warmGlow 7s ease-in-out infinite;
+}
+
+/* ── Reduced motion ───────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-in,
+  .animate-fade-in,
+  .streaming-cursor::after,
+  .pulse-ring::before,
+  .animate-warm-glow {
+    animation: none;
+  }
+}
