@@ -1,4 +1,4 @@
-<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Carlos Council — more than one AI opinion">
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Carlos Council — five strategists, one orchestrator">
   <title>Carlos Council</title>
   <!-- Warm cream backdrop with a thin amber frame -->
   <rect width="1200" height="630" fill="#FFFBEB"/>
@@ -25,7 +25,7 @@
 
   <!-- Wordmark + tagline -->
   <text x="470" y="270" font-family="Georgia, 'Times New Roman', serif" font-size="92" font-weight="700" fill="#1C1917">Carlos Council</text>
-  <text x="472" y="338" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="400" fill="#57534E">More than one AI opinion.</text>
+  <text x="472" y="338" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="400" fill="#57534E">Five strategists. One orchestrator.</text>
   <line x1="472" y1="372" x2="640" y2="372" stroke="#B45309" stroke-width="4" stroke-linecap="round"/>
-  <text x="472" y="424" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="400" fill="#78716C">A six-agent, four-phase strategy council you can self-host.</text>
+  <text x="472" y="424" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="400" fill="#78716C">A five-agent, four-phase strategy council you can self-host.</text>
 </svg>
