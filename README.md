@@ -3,8 +3,9 @@
 
   # Carlos Council
 
-  **More than one AI opinion.** Submit a business brief and watch six AI strategists —
-  each with a distinct perspective — analyze, challenge, and synthesize a plan in real time.
+  **Five AI strategists. One orchestrator. Better decisions through disagreement.**
+  Submit a business brief and watch five AI strategists — guided by Carlos, the council
+  orchestrator — analyze, challenge, and synthesize a plan in real time.
 
   <sub>FastAPI · Next.js · Server-Sent Events · works with any OpenAI-compatible model</sub>
 </div>
@@ -14,12 +15,10 @@
 ## Why Carlos Council exists
 
 Most AI tools give you **one** answer in one voice. Real strategy doesn't work that way —
-good plans survive disagreement. Carlos Council forces several expert perspectives to
-collide: a storyteller, a product architect, a revenue strategist, a growth hunter, and an
-operator all weigh in, argue, and get refined before you ever see the conclusion.
-
-Presiding over all of them is **Carlos** — the Chief Strategy Conductor who keeps the room
-honest, finds the tensions, and delivers the final plan.
+good plans survive disagreement. Carlos Council forces five expert perspectives to collide —
+a storyteller, a product architect, a revenue strategist, a growth hunter, and an operator —
+while **Carlos** orchestrates the council: he holds the room, routes the voices, challenges
+weak thinking, and turns the debate into a clear strategy.
 
 > ### The story of Carlos
 > Carlos Council is named after a dog. Carlos was the one you could trust with almost
@@ -30,7 +29,8 @@ honest, finds the tensions, and delivers the final plan.
 
 ## What it does
 
-You submit a business brief. Six AI agents take it from there:
+You submit a business brief. Five specialists go to work; Carlos orchestrates them through
+four phases:
 
 **Phase 1 — Initial Analysis.** Five specialists analyze your brief simultaneously:
 
@@ -54,8 +54,8 @@ Everything **streams in real time** — you watch the agents think, argue, and c
 
 ## Features
 
-- 🧠 **Six distinct AI perspectives** instead of one flattened opinion
-- 🎭 **Structured 4-phase debate** with a moderator that surfaces real tensions
+- 🧠 **Five specialist perspectives** orchestrated by Carlos — not one flattened opinion
+- 🎭 **Structured 4-phase debate** with Carlos as orchestrator, surfacing real tensions
 - ⚡ **Live streaming** via Server-Sent Events, with an automatic polling fallback
 - 🗂️ **Business Dossier** — a persistent company profile injected into every session
 - 🕘 **Session history & replay** — revisit and re-read past councils
