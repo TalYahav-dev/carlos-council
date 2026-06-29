@@ -65,5 +65,5 @@ review.
 ### Suggested attachments / context to give Codex
 - The full repo (including `.git` if possible, so history can be scanned).
 - These docs: `docs/SECURITY_AUDIT.md`, `docs/STATE_OF_REPO.md`, `SECURITY.md`.
-- The note that the private dossier was removed from the tree but **may remain in git
-  history** (initial commit) — ask Codex to confirm and recommend the cleanup.
+- The note that the private dossier was removed and the project re-published with **clean
+  history** (verified 2026-06-29) — ask Codex to confirm no private data remains in tree or history.

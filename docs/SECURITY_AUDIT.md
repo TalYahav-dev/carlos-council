@@ -7,8 +7,8 @@ separation, input handling, CORS, dependencies, Docker, committed artifacts, git
 
 | Severity | Finding | Status |
 |----------|---------|--------|
-| 🔴 Critical | Real private business dossier committed to the repo | **Fixed in tree** — file removed & replaced with fictional example. ⚠️ Still in **git history** — manual history rewrite required before publish |
-| 🔴 Critical | Live OpenAI API key present in local `.env` | **Not exposed** (`.env` is gitignored and was **never committed** — verified). ⚠️ **Rotate the key** as a precaution |
+| 🔴 Critical | Real private business dossier committed to the repo | **Resolved** — original repo deleted; project re-published as a **new repo with clean history**. Verified 2026-06-29 by fresh-clone scan: dossier absent from the tree **and** all 4 commits; old initial commit (`6415645`) no longer exists |
+| 🔴 Critical | Live OpenAI API key present in local `.env` | **Not exposed** (`.env` is gitignored and was **never committed** — verified across all history). Rotation is an **optional** precaution |
 | 🟠 High | CORS `allow_origins=["*"]` + `allow_credentials=True` | **Fixed** — restricted to configurable `ALLOWED_ORIGINS`, credentials disabled |
 | 🟠 High | No input length limits (brief / answers) | **Fixed** — length caps in `models.py` |
 | 🟠 High | LLM calls had no timeout/retry | **Fixed** — `timeout` + `max_retries` on the client |
@@ -52,18 +52,16 @@ separation, input handling, CORS, dependencies, Docker, committed artifacts, git
 7. **Dependency consolidation.** Single `backend/requirements.txt`; Dockerfile installs
    from it.
 
-## What still needs human attention (action required before publishing)
+## What still needs human attention
 
-1. **🔴 Rewrite git history or re-initialize the repo.** The real dossier is in the initial
-   commit (`6415645`). Removing the file now does **not** remove it from history. Options:
-   - Simplest for a brand-new public repo: start a fresh history
-     (`rm -rf .git && git init && git add . && git commit`), **after** confirming no other
-     private data remains, **or**
-   - Targeted removal with `git filter-repo --path business-dossier/business-dossier.md --invert-paths`
-     (then force-push to a clean remote).
-   - Per the brief, this is **not** done automatically — you decide and run it.
-2. **🔴 Rotate the OpenAI API key** that was in the local `.env`. It was never committed,
-   but rotating costs nothing and removes all doubt.
+1. **✅ Git history — resolved.** The original repo (which carried the real dossier in its
+   initial commit `6415645`) was **deleted**, and the project was re-published as a **new repo
+   with clean history**. Verified 2026-06-29 by a fresh `git clone` + full-history scan: only
+   4 commits exist, the dossier path never appears, and commit `6415645` is gone. No further
+   history rewrite is required.
+2. **🟡 Rotate the OpenAI API key (optional).** The key lived in the local `.env` only and was
+   **never committed** (verified across all history). If that `.env` never left your machine,
+   rotation is an optional precaution, not a requirement.
 3. **🟡 Confirm no other private notes** before publishing (the gitignored `goal.md`,
    `spline-plan.md`, and `graphify-out/` should stay out of the public repo).
 4. **🟡 Consider pinning dependencies** (exact versions or a lockfile) for reproducible

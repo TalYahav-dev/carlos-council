@@ -22,11 +22,10 @@ called out explicitly above.
 
 ## Must-do before publishing (manual, required)
 
-- [ ] **Rewrite git history or re-init the repo** to purge the real business dossier from
-      the initial commit. See [`SECURITY_AUDIT.md`](SECURITY_AUDIT.md) for exact commands.
-      _(Not done automatically, by design.)_
-- [ ] **Rotate the OpenAI API key** that was in the local `.env` (never committed, but
-      rotate to be safe).
+- [x] **Git history purged** — original repo deleted; project re-published with clean history.
+      Verified 2026-06-29 by fresh-clone scan (4 commits, no dossier, old commit `6415645` gone).
+- [ ] **Rotate the OpenAI API key** (optional) — was in the local `.env` only, never committed
+      (verified). Only needed if that `.env` ever left your machine.
 - [ ] **Confirm the LICENSE** copyright holder name and that MIT is intended (remove the
       note at the top of `LICENSE`).
 - [ ] **Skim for any other private notes** before the first public push (the gitignored
@@ -59,7 +58,7 @@ called out explicitly above.
 | App installs locally | ✅ |
 | App runs with Docker | ✅ (containers up, health + proxy verified; one full LLM council run still recommended) |
 | README clear for a stranger | ✅ |
-| No obvious secrets exposed | ✅ (key never committed; private dossier removed from tree) |
+| No obvious secrets exposed | ✅ (key never committed; dossier absent from tree **and** clean history) |
 | No private API keys in frontend | ✅ |
 | Backend handles private services | ✅ |
 | UX improved | ✅ (Carlos mark, hero copy, example briefs) |
@@ -69,4 +68,4 @@ called out explicitly above.
 | Build/test/lint status documented honestly | ✅ (this file) |
 | Launch posts ready | ✅ |
 | Codex review prompt ready | ✅ |
-| **Publishable right now?** | ⚠️ **After** the git-history rewrite + key rotation above |
+| **Publishable right now?** | ✅ **Yes** — clean history verified 2026-06-29; key rotation optional |

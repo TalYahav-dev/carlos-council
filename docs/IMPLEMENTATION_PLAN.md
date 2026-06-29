@@ -25,9 +25,10 @@ open-source product" **without rewriting the app**. Prioritize practical complet
 - [x] Replace it with `examples/business-dossier.example.md` (fully fictional).
 - [x] Harden `.gitignore` (`.vercel`, `.claude/`, `goal.md`, `spline-plan.md`,
       `graphify-out/`, `business-dossier/`, all `*.db`).
-- [x] Document that the dossier is still in **git history** → history rewrite or fresh
-      `git init` required before publishing (see Security Audit & Release Checklist).
-- [ ] **Manual:** rotate the OpenAI API key that was in the local `.env`.
+- [x] History cleaned — original repo deleted; project re-published with a fresh history.
+      Verified 2026-06-29 by fresh-clone scan: 4 commits, dossier absent, old commit gone.
+- [ ] **Manual (optional):** rotate the OpenAI API key from the local `.env` — never
+      committed (verified); only needed if that `.env` left your machine.
 
 ### B. Backend security hardening — DONE
 - [x] Restrict CORS to configurable `ALLOWED_ORIGINS`; drop `allow_credentials`.

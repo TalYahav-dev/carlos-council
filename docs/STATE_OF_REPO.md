@@ -121,10 +121,11 @@ intended use (local or trusted-network, single user) but must be stated clearly.
 found were:
 
 - A **live OpenAI API key** sat in the local `.env` (gitignored, **never committed** —
-  verified against full git history). Still, treat it as exposed and rotate it.
-- A **real, private business dossier** (`business-dossier/business-dossier.md`) **was
-  committed** in the initial commit. It contains personal and financial details. This is
-  the single biggest publish blocker.
+  verified against full git history). Rotation is optional. _(Resolved status below.)_
+- A **real, private business dossier** (`business-dossier/business-dossier.md`) was
+  committed in the original repo's initial commit. **Resolved:** that repo was deleted and
+  the project re-published with **clean history** — verified 2026-06-29 that the dossier is
+  absent from the tree and all commits.
 - CORS was `allow_origins=["*"]` with credentials enabled.
 - No input length limits; LLM calls had no timeout/retry; no rate limiting.
 
@@ -159,8 +160,9 @@ or first-run guidance; limited ARIA/keyboard a11y; light mode only.
 
 ## 12. Risks, missing pieces, unclear parts
 
-- **Privacy:** the committed real dossier (history rewrite required before publish).
-- **Secret hygiene:** rotate the local API key as a precaution.
+- **Privacy:** ✅ resolved — repo re-created with clean history; dossier absent from tree
+  and history (verified 2026-06-29).
+- **Secret hygiene:** API key never committed (verified); rotation optional.
 - **No auth + open CORS (now restricted):** fine for local use, dangerous if exposed to
   the internet without a reverse-proxy auth layer.
 - **In-memory `active_sessions`** grows without eviction — fine for local use, a memory
