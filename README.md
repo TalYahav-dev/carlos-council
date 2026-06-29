@@ -63,11 +63,6 @@ Everything **streams in real time** — you watch the agents think, argue, and c
 - 🔌 **Any OpenAI-compatible model** — OpenAI, OpenRouter, Ollama, vLLM, …
 - 🔒 **No API keys in the browser** — the frontend proxies to the backend, which holds the key
 
-## Screenshots
-
-> 📸 _Screenshots are not bundled in the repo yet. Run it locally (below) to see the live
-> streaming council. A visual asset plan lives in [`docs/ASSET_GENERATION_PLAN.md`](docs/ASSET_GENERATION_PLAN.md)._
-
 ## Tech stack
 
 | Layer | Tech |
@@ -86,7 +81,7 @@ Everything **streams in real time** — you watch the agents think, argue, and c
 ## Quick start (Docker)
 
 ```bash
-git clone <repo-url> carlos-council
+git clone https://github.com/TalYahav-dev/carlos-council.git
 cd carlos-council
 
 cp .env.example .env
@@ -222,7 +217,6 @@ tests, accessibility improvements, onboarding polish, and Carlos visual assets.
 
 ## Roadmap
 
-- [ ] Real Carlos visual identity (hero + onboarding illustrations — see asset plan)
 - [x] Automated tests (backend orchestration + API) — frontend tests still welcome
 - [ ] Optional authentication for shared/hosted deployments
 - [ ] Session export (Markdown / PDF)
@@ -231,8 +225,7 @@ tests, accessibility improvements, onboarding polish, and Carlos visual assets.
 
 ## License
 
-[MIT](LICENSE) — see the note in the license file about confirming final licensing before
-publishing.
+[MIT](LICENSE)
 
 ## Credits
 
