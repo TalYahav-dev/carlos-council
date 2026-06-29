@@ -12,6 +12,14 @@
 
 ---
 
+## Preview
+
+![Carlos Council landing page — submit a business brief to the council](docs/assets/screenshots/landing.png)
+
+![Carlos Council onboarding — your council convenes](docs/assets/screenshots/onboarding.png)
+
+---
+
 ## Why Carlos Council exists
 
 Most AI tools give you **one** answer in one voice. Real strategy doesn't work that way —

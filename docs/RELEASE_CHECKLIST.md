@@ -1,7 +1,7 @@
 # Release Checklist — Carlos Council
 
 Honest status of build/lint/test/Docker checks and the steps required before publishing
-publicly. Checks were run against the working tree on `master` (changes not yet committed).
+publicly. Checks were run against the working tree on `main` (changes not yet committed).
 
 ## Verification status (what actually ran)
 
